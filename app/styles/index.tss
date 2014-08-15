@@ -1,0 +1,56 @@
+".container": {
+	backgroundColor:"white"
+},
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+} 
+".index": {
+	backgroundColor: '#000',
+	color: '#FFF',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {	fontWeight: 'bold' },
+	opacity: 0.6,
+	left: 0,
+	top: 0,
+	width: '64dp',
+	height: '64dp'
+}
+".thumbnail": {
+	width: '64dp',
+	height: '64dp',
+	left: 0,
+	top: 0	
+}
+".title": {
+	color: '#2c3e50',
+	font: {fontSize:'14sp'},
+	height: '18dp',
+	width: Ti.UI.FILL,
+	horizontalWrap: false,
+	textAlign: 'left',
+	top: '12dp',
+	ellipsize: true,
+	wordWrap: false,
+	left: '80dp',
+	right: '40dp'
+}
+".artist": {
+	color: '#7f8c8d',
+	font: {fontSize:'12sp'},
+	height: '16dp',
+	width: Ti.UI.FILL,
+	horizontalWrap: false,
+	wordWrap: false,
+	ellipsize: true,
+	textAlign: 'left',
+	top: '30dp',
+	left: '80dp'	
+}
+".toast": {
+	width: '16dp',
+	height: '16dp',
+	right: '12dp',
+	top: '14dp'
+}

@@ -1,0 +1,49 @@
+<Alloy>
+	<Collection src="favoriteTracks"/>
+	<Collection src="hipsterTracks"/>
+	<Collection src="mainstreamTracks"/>
+	<TabGroup id="window" title="JamJar">
+		<Menu id="menu">
+			<MenuItem id="menuItemRefresh" title="Refresh" onClick="refresh" showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"/>
+		</Menu>
+		<Tab title="Hipster">
+			<Window id="windowHipster" title="Hipster">
+				<TableView dataCollection="hipsterTracks" id="hipsterTracksTable">
+				<!-- <TableView id="hipsterTracksTable"> -->
+					<TableViewRow url="{url}" onClick="openURL">
+						<ImageView class="index" text="index"/>
+						<ImageView class="thumbnail" image="{thumbnail}"/>
+						<Label class="title" text="{title}"/>
+						<Label class="artist" text="{artist}"/>
+						<ImageView class="toast" title="{title}" image="/images/toasted.png" onClick="favoriteTrack"/>
+					</TableViewRow>
+				</TableView>
+			</Window>	
+		</Tab>
+		<Tab title="Mainstream">
+			<Window id="windowMainstream" title="Mainstream">
+				<TableView dataCollection="mainstreamTracks" id="mainstreamTracksTable">
+					<TableViewRow url="{url}" onClick="openURL">
+						<ImageView class="index" text="index"/>
+						<ImageView class="thumbnail" image="{thumbnail}"/>
+						<Label class="title" text="{title}"/>
+						<Label class="artist" text="{artist}"/>
+						<ImageView class="toast" title="{title}" image="/images/toasted.png" onClick="favoriteTrack"/>
+					</TableViewRow>
+				</TableView>
+			</Window>
+		</Tab>
+		<Tab title="Favorites">
+			<Window id="windowFavorites" title="Favorites">
+				<TableView dataCollection="favoriteTracks">
+					<TableViewRow url="{url}" onClick="openURL">
+						<ImageView class="thumbnail" image="{thumbnail}"/>
+						<Label class="title" text="{title}"/>
+						<Label class="artist" text="{artist}"/>
+						<ImageView class="toast" title="{title}" image="/images/toasted.png" onClick="favoriteTrack"/>
+					</TableViewRow>
+				</TableView>
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>
